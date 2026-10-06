@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card">
+        <h1 id="title">DOM Example</h1>
+        <p id="name">Anuraag</p>
+        <p id="branch">Branch: CSE</p>
+        <p id="marks">85</p>
+        <input type="text" id="studentName" placeholder="Enter your name">
+        <br><br>
+        <button id="updateBtn">Update Name</button>
+        <button id="colorBtn">Change Color</button>
+        <button id="resultBtn">Show Result</button>
+        <button id="removeBtn">Remove Result</button>
+    </div>
+
+    <script>
+        let title = document.getElementById('title');
+        let name = document.getElementById('name');
+        let input = document.getElementById('studentName');
+        let updateBtn = document.getElementById('updateBtn');
+
+        title.textContent = "DOM Student Profile";
+        title.style.color = "red";
+        title.classList.add("highlight");
+
+        updateBtn.addEventListener('click', 
+            function() {
+                let studentName = input.value;
+                name.textContent = "Name: " + studentName;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="myForm">
+
+        Name:
+        <input type="text" id="name">
+        <br><br>
+
+        Age:
+        <input type="number" id="age">
+        <br><br>
+
+        Email:
+        <input type="email" id="email">
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <h3 id="result"></h3>
+
+
+    <script>
+
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let email = document.getElementById("email").value;
+
+            var message = "Registration Successful";
+
+            document.getElementById("result").innerHTML =
+                message + "<br>" +
+                "Name: " + name + "<br>" +
+                "Age: " + age + "<br>" +
+                "Email: " + email;
+        });
+
+    </script>
+
+</body>
+</html>
